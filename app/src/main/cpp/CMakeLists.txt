@@ -7,8 +7,8 @@ include(FetchContent)
 # cek changelog llama.cpp lalu update tag ini + sesuaikan llama_jni.cpp.
 FetchContent_Declare(
     llama_cpp
-    GIT_REPOSITORY https://github.com/ggerganov/llama.cpp.git
-    GIT_TAG        b3600
+    GIT_REPOSITORY https://github.com/ggml-org/llama.cpp.git
+    GIT_TAG        b9802
 )
 
 set(LLAMA_BUILD_TESTS OFF CACHE BOOL "" FORCE)
