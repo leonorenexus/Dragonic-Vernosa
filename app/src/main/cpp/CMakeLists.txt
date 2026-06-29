@@ -26,7 +26,6 @@ add_library(dragonicvernosa SHARED
 target_include_directories(dragonicvernosa PRIVATE
     ${llama_cpp_SOURCE_DIR}/include
     ${llama_cpp_SOURCE_DIR}/ggml/include
-    ${llama_cpp_SOURCE_DIR}/common
 )
 
 find_library(log-lib log)
@@ -34,7 +33,6 @@ find_library(android-lib android)
 
 target_link_libraries(dragonicvernosa
     llama
-    common
     ${log-lib}
     ${android-lib}
 )
