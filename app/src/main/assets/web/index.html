@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Dragonic Vernosa</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header id="top-bar">
+  <div class="brand">
+    <span class="brand-main">DRAGONIC</span><span class="brand-accent">VERNOSA</span>
+  </div>
+  <div class="status">
+    <span id="status-dot" class="dot offline"></span>
+    <span id="status-text">MODEL BELUM DI-LOAD</span>
+  </div>
+  <button id="settings-toggle" title="Setup model">⚙</button>
+</header>
+
+<div id="setup-panel" class="setup-panel">
+  <div class="setup-title">SETUP MODEL GGUF (1-3B, offline)</div>
+
+  <div class="setup-row">
+    <button id="import-btn" class="btn-neon">📂 Import file GGUF</button>
+  </div>
+
+  <div class="setup-row">
+    <input id="url-input" type="text" placeholder="https://...model.gguf (link langsung)" />
+    <button id="download-btn" class="btn-neon">⬇ Download</button>
+  </div>
+
+  <div id="progress-wrap" class="progress-wrap" style="display:none;">
+    <div id="progress-bar" class="progress-bar"></div>
+  </div>
+
+  <div class="setup-row">
+    <button id="delete-model-btn" class="btn-ghost">🗑 Hapus model</button>
+  </div>
+</div>
+
+<main id="chat-log" class="chat-log"></main>
+
+<footer id="input-bar">
+  <textarea id="input-box" placeholder="Ketik pesan ke Vernosa..." rows="1"></textarea>
+  <button id="send-btn" class="send-btn" disabled>➤</button>
+  <button id="stop-btn" class="stop-btn" style="display:none;">■</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
